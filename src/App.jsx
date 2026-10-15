@@ -65,7 +65,7 @@ function NewTicket() {
       p_desc: f.description.trim(),
     });
     setBusy(false);
-    if (error) return setError(errText(error));
+    if (error) { console.error(error); return setError(errText(error)) };
     setCreated(data);
     setF(empty);
   }
